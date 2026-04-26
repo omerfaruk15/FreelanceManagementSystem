@@ -1,12 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    internal class Gorev
+    public abstract class Gorev
     {
+        public int TaskID { get; set; }
+        public int ProjectID { get; set; }
+        public int EmployeeID { get; set; }
+        public string? TaskTitle { get; set; }
+        public decimal HourlyRate { get; set; }
+        public decimal WorkedHours { get; set; }
+        public string? TaskType { get; set; }
+
+        public abstract decimal HakedisHesapla();
     }
 }
